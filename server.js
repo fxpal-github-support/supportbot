@@ -42,6 +42,10 @@ web.users.list()
 
             // setup email data with unicode symbols
             let username = (user[message.user] || {}).name || message.user;
+            if (!username) {
+                return;
+            }
+
             let mailOptions = {
                 from: '"SupportBot" <support@fxpal.com>', // sender address
                 to: 'support@fxpal.com', // list of receivers
