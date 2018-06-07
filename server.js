@@ -40,11 +40,12 @@ web.users.list()
             //console.log(`(channel:${message.channel}) ${user[message.user].name} says: ${message.text}`);
 
             // setup email data with unicode symbols
+            let username = (user[message.user] || {}).name || message.user;
             let mailOptions = {
                 from: '"SupportBot" <support@fxpal.com>', // sender address
                 to: 'support@fxpal.com', // list of receivers
                 subject: 'From Slack: #support', // Subject line
-                text: `${user[message.user].name} says: ${message.text}`, // plain text bod
+                text: `${username} says: ${message.text}`, // plain text bod
             };
 
 
