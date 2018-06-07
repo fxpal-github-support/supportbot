@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@slack/client": "^4.3.0",
+    "dotenv": "^6.0.0",
     "nodemailer": "^4.6.5"
   }
 }

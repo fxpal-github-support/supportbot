@@ -1,6 +1,7 @@
 const { RTMClient } = require('@slack/client');
 const { WebClient } = require('@slack/client');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 // An access token (from your Slack app or custom integration - usually xoxb)
 const token = process.env.SLACK_TOKEN;
