@@ -1,0 +1,11 @@
+{
+  "name": "supportbot",
+  "version": "1.0.0",
+  "description": "slack bot for #support channel",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/client": "^4.3.0",
+    "nodemailer": "^4.6.5"
+  }
+}
