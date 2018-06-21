@@ -9,7 +9,7 @@ const bottoken = process.env.BOT_SLACK_TOKEN;
 const mailTo = process.env.MAILTO || 'support@fxpal.com';
 const mailFrom = process.env.MAILFROM || '"SupportBot" <support@fxpal.com>';
 
-console.log(webtoken, bottoken, mailTo, mailFrom);
+// console.log(webtoken, bottoken, mailTo, mailFrom);
 
 // The client is initialized and then started to get an active connection to the platform
 const rtm = new RTMClient(bottoken);
