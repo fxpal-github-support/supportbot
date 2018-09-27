@@ -55,7 +55,7 @@ rtm.on('message', (message) => {
 function getUserInfo(id) {
     return new Promise(function(resolve, reject) {
         let info = user[id]
-        if (info) {
+        if (info && info.display_name) {
             resolve(info);
         } else {
             web.users.profile.get({ user: id }).then((res) => {
@@ -83,6 +83,11 @@ function getChanelname(id) {
 }
 
 function sendEmail(username, realname, email, channelname, text) {
+    if (!text) {
+        console.log('Skipping message:', username, realname, email, channelname, text);
+        return;
+    }
+
     let mailOptions = {
         from: mailFrom, // sender address
         replyTo: `"${realname || mailTo}" <${email || mailTo}>`,
